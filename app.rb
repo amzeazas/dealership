@@ -26,6 +26,9 @@ end
 
 get('/vehicles/:id') do
   @vehicle = Vehicle.find(params.fetch('id').to_i())
+  @make = params.fetch('make')
+  @model = params.fetch('model')
+  @year = params.fetch('year')
   erb(:vehicle)
 end
 
